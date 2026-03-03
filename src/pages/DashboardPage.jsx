@@ -10,6 +10,7 @@ import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
 import { PiProhibit } from "react-icons/pi";
 import { IoWarningOutline } from "react-icons/io5";
 import { LuSearchX } from "react-icons/lu";
+import { LuRefreshCcw } from "react-icons/lu";
 
 export default function DashboardPage({ onNotify, scanRows, setScanRows }) {
     const [searchTerm, setSearchTerm] = useState("");
@@ -90,6 +91,66 @@ export default function DashboardPage({ onNotify, scanRows, setScanRows }) {
                 </>
             }
         >
+              <section className="w-full max-sm:overflow-x-scroll">
+                <div className="stats-grid-top w-full grid sm:grid-cols-4 xl:grid-cols-7 gap-3 bg-white mt-2 px-4 py-2 rounded-[12px] border border-[#dde3eb] max-sm:grid-cols-7 max-sm:w-[1000px]">
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Org:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            ProjectX
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Owner:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            Nammagiri
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Total Scans:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            100
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Schedule:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            1000
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Rescans:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            100
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 border-r border-r-gray-200">
+                        <span className="text-gray-400 text-[13px] font-normal">
+                            Failed Scans:
+                        </span>
+                        <span className="text-[13px] text-black font-medium">
+                            100
+                        </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2">
+                        <span>
+                            <LuRefreshCcw size={16} color="#0cc8a8" />
+                        </span>
+                        <span className="text-[13px] text-black font-medium text-gray-400">
+                            10 mins ago
+                        </span>
+                    </div>
+                </div>
+            </section>
             <section className="stats-grid">
                 <article className="stat-card">
                     <div className="flex justify-between items-center">
@@ -109,7 +170,7 @@ export default function DashboardPage({ onNotify, scanRows, setScanRows }) {
                     <div className="flex justify-between items-center">
                         <p>High Severity</p>
                         <div className="w-6 h-6 rounded-[4px] bg-amber-500/20 flex items-center justify-center">
-                            <IoWarningOutline size={16} color="brown"/>
+                            <IoWarningOutline size={16} color="brown" />
                         </div>
                     </div>
 
@@ -124,7 +185,7 @@ export default function DashboardPage({ onNotify, scanRows, setScanRows }) {
                     <div className="flex justify-between items-center">
                         <p>Medium Severity</p>
                         <div className="w-6 h-6 rounded-[4px] bg-yellow-400/20 flex items-center justify-center">
-                            <IoWarningOutline size={16} color="orange"/>
+                            <IoWarningOutline size={16} color="orange" />
                         </div>
                     </div>
 
